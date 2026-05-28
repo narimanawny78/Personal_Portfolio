@@ -1,1 +1,162 @@
 /* You can add global styles to this file, and also import other style files */
+/* GOOGLE FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* FONT AWESOME */
+
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+/* LIGHT MODE */
+
+:root {
+
+  --bg-color: #f7f6f5;
+
+  --text-color: #212529;
+
+  --accent-color: #D35400;
+
+  --card-color: #ffffff;
+
+  --border-color: #dddddd;
+
+  --secondary-text: #6c757d;
+
+  --shadow-color: rgba(0,0,0,0.1);
+
+}
+
+/* DARK MODE */
+
+body.dark {
+
+  --bg-color: #1a1412;
+
+  --text-color: #f0e8e0;
+
+  --accent-color: #E8651A;
+
+  --card-color: #261d1a;
+
+  --border-color: #3d2e26;
+
+  --secondary-text: #c9b8aa;
+
+  --shadow-color: rgba(0,0,0,0.4);
+
+}
+
+/* RESET */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+
+  font-family:'Poppins', sans-serif;
+
+  background-color:var(--bg-color);
+
+  color:var(--text-color);
+
+  transition:.3s;
+}
+
+a{
+  text-decoration:none;
+}
+
+ul{
+  list-style:none;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+section{
+  padding:100px 0;
+}
+
+.container{
+
+  width:min(90%, 1200px);
+
+  margin-inline:auto;
+}
+
+.btn{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  padding:12px 28px;
+
+  border:none;
+
+  border-radius:30px;
+
+  background-color:var(--accent-color);
+
+  color:white;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.btn:hover{
+
+  transform:translateY(-5px);
+
+  box-shadow:0 10px 20px var(--shadow-color);
+}
+
+.section-title{
+
+  text-align:center;
+
+  margin-bottom:60px;
+}
+
+.section-title h2{
+
+  font-size:2.5rem;
+
+  position:relative;
+
+  display:inline-block;
+
+  padding-bottom:10px;
+}
+
+.section-title h2::after{
+
+  content:'';
+
+  position:absolute;
+
+  left:50%;
+
+  transform:translateX(-50%);
+
+  bottom:0;
+
+  width:70px;
+
+  height:3px;
+
+  background-color:var(--accent-color);
+}

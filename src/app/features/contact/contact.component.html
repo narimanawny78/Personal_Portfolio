@@ -1,0 +1,95 @@
+<section id="contact">
+  <div class="container">
+
+    <!-- Title -->
+     <div class="section-title">
+      <h2> Get In Touch </h2>
+     </div>
+     <div class="contact-container">
+      <!-- LEFT -->
+       <div class="contact-info">
+        <h3> Let's Work Togther! </h3>
+        <p>
+          I'm always open to discussing new projects,
+          creative ideas, or opportunities.
+        </p>
+        <div class="conract-details">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+
+            <div>
+              <h4>Email</h4>
+              <p>narimanawny93&#64;gmail.com</p>
+            </div>
+
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-location-dot"></i>
+            </div>
+
+            <div>
+              <h4>Location</h4>
+
+              <p>Cairo, Egypt</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- RIGHT -->
+        <div class="contact-form">
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <!-- Name -->
+             <div class="form-group">
+
+              <input type="text" formControlName="name" placeholder="">
+              <label>Your Name</label>
+
+              @if (contactForm.get('name')?.touched && contactForm.get('name')?.invalid) {
+                <small>Name must be at least 3 characters</small>
+              }
+             </div>
+            <!-- Email -->
+             <div class="form-group">
+
+              <input type="text" formControlName="email" placeholder="">
+              <label>Your Email</label>
+
+              @if (contactForm.get('email')?.touched && contactForm.get('email')?.invalid) {
+                <small>Enter a valid email</small>
+              }
+             </div>
+            <!-- Subject -->
+             <div class="form-group">
+
+              <input type="text" formControlName="subject" placeholder="">
+              <label>Subject</label>
+
+              @if (contactForm.get('subject')?.touched && contactForm.get('subject')?.invalid) {
+                <small>Subject is required</small>
+              }
+             </div>
+            <!-- Message -->
+             <div class="form-group">
+
+              <textarea type="text" formControlName="message" placeholder=""></textarea>
+              <label>Your Message</label>
+
+              @if (contactForm.get('message')?.touched && contactForm.get('message')?.invalid) {
+                <small>Message must be at least 10 characters</small>
+              }
+             </div>
+
+            <button type="submit" class="btn">
+              Send Message
+            </button>
+
+          </form>
+        </div>
+     </div>
+  </div>
+</section>

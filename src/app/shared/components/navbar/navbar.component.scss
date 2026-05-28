@@ -1,0 +1,194 @@
+.navbar {
+
+  width: 100%;
+
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  z-index: 1000;
+
+  background-color: var(--card-color);
+
+  border-bottom: 1px solid var(--border-color);
+
+  backdrop-filter: blur(10px);
+}
+
+.nav-container {
+
+  height: 80px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+/* LOGO */
+
+.logo {
+
+  display: flex;
+
+  align-items: center;
+
+  // gap: 4px;
+
+  font-size: 1.7rem;
+
+  font-weight: 700;
+
+  color: var(--accent-color);
+}
+
+.logo span {
+
+  // color: var(--text-color);
+  color: var(--accent-color);
+}
+
+/* NAV LINKS */
+
+.nav-links {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 2rem;
+}
+
+.nav-links a {
+
+  position: relative;
+
+  color: var(--text-color);
+
+  font-weight: 500;
+
+  transition: .3s;
+}
+
+.nav-links a:hover {
+
+  color: var(--accent-color);
+}
+
+.nav-links a::after {
+
+  content: '';
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -5px;
+
+  width: 0;
+
+  height: 2px;
+
+  background-color: var(--accent-color);
+
+  transition: .3s;
+}
+
+.nav-links a:hover::after {
+
+  width: 100%;
+}
+
+/* ACTIONS */
+
+.nav-actions {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+}
+
+/* BUTTONS */
+
+.theme-btn,
+.menu-btn {
+
+  width: 45px;
+
+  height: 45px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  background-color: var(--bg-color);
+
+  color: var(--text-color);
+
+  font-size: 1rem;
+
+  transition: .3s;
+}
+
+.theme-btn:hover,
+.menu-btn:hover {
+
+  background-color: var(--accent-color);
+
+  color: white;
+}
+
+/* HAMBURGER */
+
+.menu-btn {
+
+  display: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .menu-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+  }
+
+  .nav-links {
+
+    position: fixed;
+
+    top: 80px;
+
+    right: -100%;
+
+    width: 280px;
+
+    height: calc(100vh - 80px);
+
+    background-color: var(--card-color);
+
+    flex-direction: column;
+
+    padding-top: 4rem;
+
+    transition: .4s;
+  }
+
+  .nav-links.active {
+
+    right: 0;
+  }
+
+}

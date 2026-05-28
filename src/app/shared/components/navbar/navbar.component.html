@@ -1,0 +1,39 @@
+<nav class="navbar">
+  <div class="container nav-container">
+    <!-- LOGO -->
+     <a href="#header" class="logo">
+
+      <i class="fa-brands fa-neos"></i>
+
+         <span>ariman</span>
+     </a>
+
+     <!-- NAV LINKS -->
+
+     <div class="nav-links" [class.active]="isMenuOpen">
+      @for (link of navLinks; track link) {
+        <a href="#{{link.toLocaleLowerCase()}}" (click)="isMenuOpen = false">{{link}}</a>
+      }
+     </div>
+
+     <!-- Right side -->
+      <div class="nav-actions">
+        <!-- theme button -->
+         <button class="theme-btn" (click)="themeService.toggleTheme()">
+          @if (themeService.isDark) {
+            <i class="fa-solid fa-sun"></i>
+          }@else{
+            <i class="fa-solid fa-moon"></i>
+          }
+         </button>
+         <!-- Hamburger -->
+          <button class="menu-btn" (click)="toggleMenu()">
+            @if(isMenuOpen) {
+              <i class="fa-solid fa-xmark"></i>
+            }@else {
+               <i class="fa-solid fa-bars"></i>
+            }
+          </button>
+      </div>
+  </div>
+</nav>

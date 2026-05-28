@@ -1,0 +1,91 @@
+<section id="skills">
+
+  <div class="container">
+
+    <!-- SECTION TITLE -->
+
+    <div class="section-title">
+
+      <h2>
+
+        My Skills
+
+      </h2>
+
+    </div>
+
+    <!-- CATEGORIES -->
+
+    <div class="skills-categories">
+
+      @for(category of skillCategories; track category.title) {
+
+        <div class="category-card">
+
+          <!-- CATEGORY TITLE -->
+
+          <h3>
+
+            {{ category.title }}
+
+          </h3>
+
+          <!-- SKILLS -->
+
+          <div class="skills-list">
+
+            @for(skill of category.skills; track skill.name) {
+
+              <div class="skill-item">
+
+                <!-- TOP -->
+
+                <div class="skill-header">
+
+                  <div class="skill-info">
+
+                    <i [class]="skill.icon"></i>
+
+                    <span>
+
+                      {{ skill.name }}
+
+                    </span>
+
+                  </div>
+
+                  <span class="skill-level">
+
+                    {{ skill.level }}%
+
+                  </span>
+
+                </div>
+
+                <!-- PROGRESS BAR -->
+
+                <div class="progress-bar">
+
+                  <div
+                    class="progress-fill"
+
+                    [style.width.%]="skill.level"
+                  ></div>
+
+                </div>
+
+              </div>
+
+            }
+
+          </div>
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
