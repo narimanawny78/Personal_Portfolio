@@ -10,7 +10,7 @@ export const PROJECT_CATEGORIES: ProjectCategory[] = [
     description:
       'Projects developed during my ITI intensive training.',
 
-    image: 'assets/images/iti-projects.png',
+    image: 'assets/images/projects/iti-projects.png',
 
     route: '/projects/iti'
   },
@@ -23,7 +23,7 @@ export const PROJECT_CATEGORIES: ProjectCategory[] = [
     description:
       'Responsive and modern frontend applications.',
 
-    image: 'assets/images/projects/frontend-projects.jpg',
+    image: 'assets/images/projects/frontend-projects.png',
 
     route: '/projects/frontend'
   },
@@ -36,7 +36,7 @@ export const PROJECT_CATEGORIES: ProjectCategory[] = [
     description:
       'Applications built with frontend and backend technologies.',
 
-    image: 'assets/images/projects/fullstack-projects.jpg',
+    image: 'assets/images/projects/fullstack-projects.png',
 
     route: '/projects/fullstack'
   }

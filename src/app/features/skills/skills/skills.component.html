@@ -12,6 +12,10 @@
 
       </h2>
 
+      <p class="section-description">
+        Technologies and tools I use to build modern web applications.
+      </p>
+
     </div>
 
     <!-- CATEGORIES -->
@@ -20,7 +24,7 @@
 
       @for(category of skillCategories; track category.title) {
 
-        <div class="category-card">
+        <div class="category-card" [class.frontend-card]="category.title === 'Frontend'">
 
           <!-- CATEGORY TITLE -->
 

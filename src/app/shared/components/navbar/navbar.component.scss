@@ -94,7 +94,7 @@
 
   background-color: var(--accent-color);
 
-  transition: .3s;
+  transition: .6s;
 }
 
 .nav-links a:hover::after {
@@ -115,7 +115,64 @@
 
 /* BUTTONS */
 
-.theme-btn,
+.theme-toggle {
+
+  width: 70px;
+
+  height: 36px;
+
+  border: none;
+
+  border-radius: 50px;
+
+  background: #3d2e26;
+
+  position: relative;
+
+  cursor: pointer;
+
+  transition: .4s;
+}
+
+.toggle-thumb {
+
+  width: 28px;
+
+  height: 28px;
+
+  border-radius: 50%;
+
+  background: #f0e8e0;
+
+  position: absolute;
+
+  top: 4px;
+
+  left: 4px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  transition: .4s;
+
+  color: #141412;
+
+  font-size: .9rem;
+}
+
+.theme-toggle.dark .toggle-thumb {
+
+  transform: translateX(34px);
+}
+
+.theme-toggle.dark {
+
+  background: var(--accent-color);
+}
+
 .menu-btn {
 
   width: 45px;
@@ -137,7 +194,7 @@
   transition: .3s;
 }
 
-.theme-btn:hover,
+
 .menu-btn:hover {
 
   background-color: var(--accent-color);

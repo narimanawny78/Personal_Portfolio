@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact',
@@ -24,7 +25,21 @@ export class ContactComponent {
       this.contactForm.markAllAsTouched();
       return;
     }
-    //leeh ??
-    console.log(this.contactForm.value);
+    emailjs.send(
+    'portfolio_contact_Us',
+    'template_y9hpdsc',
+    {
+      name: this.contactForm.value.name,
+      email: this.contactForm.value.email,
+      subject: this.contactForm.value.subject,
+      message: this.contactForm.value.message
+    },
+    'iHNxE_SS8gZMAEIac').then(() =>{
+       alert('Message sent successfully!');
+       this.contactForm.reset();
+    }).catch((error)=>{
+      console.error(error);
+      alert('Failed to send message');
+    })
   }
 }

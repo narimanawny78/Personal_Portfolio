@@ -12,20 +12,40 @@
 
      <div class="nav-links" [class.active]="isMenuOpen">
       @for (link of navLinks; track link) {
-        <a href="#{{link.toLocaleLowerCase()}}" (click)="isMenuOpen = false">{{link}}</a>
+        <a
+  [attr.href]="'#' + link.toLowerCase()"
+  (click)="closeMenu()">
+  {{ link }}
+</a>
       }
      </div>
 
      <!-- Right side -->
       <div class="nav-actions">
         <!-- theme button -->
-         <button class="theme-btn" (click)="themeService.toggleTheme()">
+         <!-- <button class="theme-btn" (click)="themeService.toggleTheme()">
           @if (themeService.isDark) {
             <i class="fa-solid fa-sun"></i>
           }@else{
             <i class="fa-solid fa-moon"></i>
           }
-         </button>
+         </button> -->
+         <button
+  class="theme-toggle"
+  (click)="themeService.toggleTheme()"
+  [class.dark]="themeService.isDark">
+
+  <span class="toggle-thumb">
+
+    @if (themeService.isDark) {
+      <i class="fa-solid fa-moon"></i>
+    } @else {
+      <i class="fa-solid fa-sun"></i>
+    }
+
+  </span>
+
+</button>
          <!-- Hamburger -->
           <button class="menu-btn" (click)="toggleMenu()">
             @if(isMenuOpen) {

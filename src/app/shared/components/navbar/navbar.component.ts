@@ -17,6 +17,7 @@ export class NavbarComponent {
   navLinks = [
     'Home',
     'About',
+    'Skills',
     'Projects',
     'Contact'
   ];
@@ -25,4 +26,8 @@ export class NavbarComponent {
   toggleMenu(){
     this.isMenuOpen = !this.isMenuOpen;
   }
+
+  closeMenu() {
+  this.isMenuOpen = false;
+}
 }

@@ -14,7 +14,7 @@ export const PROJECTS: Project[] = [
 
     githubUrl: '',
 
-    liveDemoUrl: '',
+    liveDemoUrl: 'https://jsproj-group.web.app/index.html',
 
     technologies: [
       'JavaScript',
@@ -38,7 +38,7 @@ export const PROJECTS: Project[] = [
 
     githubUrl: '',
 
-    liveDemoUrl: '',
+    liveDemoUrl: 'https://resume-app-xi-three.vercel.app/',
 
     technologies: [
       'Angular',
@@ -61,7 +61,7 @@ export const PROJECTS: Project[] = [
 
     githubUrl: '',
 
-    liveDemoUrl: '',
+    liveDemoUrl: 'https://book-store-client-ten-alpha.vercel.app/',
 
     technologies: [
       'MongoDB',
@@ -83,7 +83,7 @@ export const PROJECTS: Project[] = [
 
     image: 'assets/images/projects/ecocycle.png',
 
-    githubUrl: '',
+    githubUrl: 'https://github.com/EcoRenew',
 
     liveDemoUrl: '',
 
@@ -94,6 +94,52 @@ export const PROJECTS: Project[] = [
     ],
 
     category: 'iti'
-  }
+  },
+  {
+  id: 5,
+
+  title: 'Movie App',
+
+  description:
+    'Movie discovery application built with Angular and external APIs.',
+
+  image: 'assets/images/projects/movie-app.png',
+
+  githubUrl: 'https://github.com/narimanawny78/Angular_MovieApp.git',
+
+  liveDemoUrl: '',
+
+  technologies: [
+    'Angular',
+    'TypeScript',
+    'RxJS',
+    'REST API'
+  ],
+
+  category: 'frontend'
+},
+{
+  id: 6,
+
+  title: 'E-Commerce Platform',
+
+  description:
+    'Full stack e-commerce platform built with Angular, Firebase and NgRx Signal Store.',
+
+  image: 'assets/images/projects/fullstack_Angular_ecommerce.png',
+
+  githubUrl: 'ecommerce: https://github.com/narimanawny78/Angular_Ecommerce',
+
+  liveDemoUrl: '',
+
+  technologies: [
+    'Angular',
+    'Firebase',
+    'NgRx Signal Store',
+    'TypeScript'
+  ],
+
+  category: 'fullstack'
+}
 
 ];

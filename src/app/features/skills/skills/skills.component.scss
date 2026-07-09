@@ -9,12 +9,56 @@
 
   display: grid;
 
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   gap: 2rem;
 
   align-items: stretch;
 }
+
+.section-description {
+
+  color: var(--secondary-text);
+
+  text-align: center;
+
+  max-width: 600px;
+
+  margin: 1rem auto 0;
+
+  line-height: 1.7;
+}
+
+/*FRONTEND CARD*/
+
+.frontend-card {
+
+  grid-column: 1 / -1;
+
+  border: 2px solid var(--accent-color);
+
+  box-shadow:
+    0 0 20px rgba(230, 101, 26, .15);
+
+}
+
+.frontend-card h3 {
+
+  font-size: 2rem;
+
+  margin-bottom: 2.5rem;
+}
+
+.frontend-card .skills-list {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 1.5rem;
+}
+
+
 
 /* CARD */
 
@@ -33,6 +77,8 @@
   position: relative;
 
   overflow: hidden;
+
+  height: 100%;
 }
 
 .category-card::before {
