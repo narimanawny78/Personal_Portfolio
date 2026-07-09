@@ -8,7 +8,7 @@ export const SKILL_CATEGORIES = [
 
   {
     name: 'Angular',
-    level: 90,
+    level: 85,
     icon: 'fa-brands fa-angular'
   },
 
@@ -62,13 +62,13 @@ export const SKILL_CATEGORIES = [
 
   {
     name: 'RxJS',
-    level: 80,
+    level: 75,
     icon: 'fa-solid fa-repeat'
   },
 
   {
-    name: 'NgRx Signal Store',
-    level: 75,
+    name: 'NgRx',
+    level: 70,
     icon: 'fa-solid fa-database'
   },
 

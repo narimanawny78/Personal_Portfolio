@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import emailjs from '@emailjs/browser';
-
+import { environment } from '../../../environments/environment';
 @Component({
   selector: 'app-contact',
   standalone: true,
@@ -26,15 +26,16 @@ export class ContactComponent {
       return;
     }
     emailjs.send(
-    'portfolio_contact_Us',
-    'template_y9hpdsc',
+      environment.emailJs.serviceId,
+      environment.emailJs.templateId,
     {
       name: this.contactForm.value.name,
       email: this.contactForm.value.email,
       subject: this.contactForm.value.subject,
       message: this.contactForm.value.message
     },
-    'iHNxE_SS8gZMAEIac').then(() =>{
+    environment.emailJs.publicKey
+  ).then(() =>{
        alert('Message sent successfully!');
        this.contactForm.reset();
     }).catch((error)=>{

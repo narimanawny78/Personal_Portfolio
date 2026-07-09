@@ -17,10 +17,10 @@ export const PROJECTS: Project[] = [
     liveDemoUrl: 'https://jsproj-group.web.app/index.html',
 
     technologies: [
+      'HTML',
+      'CSS',
       'JavaScript',
       'Firebase',
-      'HTML',
-      'CSS'
     ],
 
     category: 'iti'
@@ -43,7 +43,7 @@ export const PROJECTS: Project[] = [
     technologies: [
       'Angular',
       'TypeScript',
-      'SCSS'
+      'Bootstarp'
     ],
 
     category: 'iti'
@@ -64,9 +64,9 @@ export const PROJECTS: Project[] = [
     liveDemoUrl: 'https://book-store-client-ten-alpha.vercel.app/',
 
     technologies: [
+      'Angular',
       'MongoDB',
       'Express',
-      'Angular',
       'Node.js'
     ],
 
@@ -90,7 +90,8 @@ export const PROJECTS: Project[] = [
     technologies: [
       'React',
       'Laravel',
-      'MySQL'
+      'MySQL',
+      'Tailwind'
     ],
 
     category: 'iti'
@@ -113,6 +114,7 @@ export const PROJECTS: Project[] = [
     'Angular',
     'TypeScript',
     'RxJS',
+    'Sass',
     'REST API'
   ],
 
@@ -124,7 +126,7 @@ export const PROJECTS: Project[] = [
   title: 'E-Commerce Platform',
 
   description:
-    'Full stack e-commerce platform built with Angular, Firebase and NgRx Signal Store.',
+    'Full stack e-commerce platform built with Angular v20, Firebase and NgRx Signal Store.',
 
   image: 'assets/images/projects/fullstack_Angular_ecommerce.png',
 
